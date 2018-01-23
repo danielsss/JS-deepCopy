@@ -4,11 +4,11 @@ const deep = new DeepCopy();
 /*global describe, it*/
 
 describe("Deep-Copy", function(){
-    let arr = [1, 2, 3, ["a", "c"], 4];
+    
     describe(`#Array:`, function(){
         it("Array deep copies and should returns an copied array", async ()=>{
-            
-            let arr1 = deep.clean().copy(arr);
+            let arr = [1, 2, 3, ["a", "c"], 4];
+            let arr1 = deep.cleaner.duplicator;
             should.notDeepEqual(arr, arr1);
             arr[0] = 100, arr[3][0] = "dddddd";
 
@@ -25,6 +25,7 @@ describe("Deep-Copy", function(){
             obj.a = 100;
             obj.d.e = 500;
             should(obj1).have.not.property("a", 100);
+            should(obj1.d).have.not.property("e", 500);
             should(obj.d).have.property("e", 500);
         });
     });
