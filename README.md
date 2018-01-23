@@ -30,7 +30,7 @@ cd js-deep-copy && npm test
 > let arr1 = deep.cleaner.copy(arr); 
 // You can use another ways, such as:
 // const deep = new DeepCopy(arr);
-// getter deep.cleaner.duplicator
+// deep.cleaner.duplicator
 > arr[0] = 10;
 > console.log(arr);
 [10, 2, [4, 5], 3]
